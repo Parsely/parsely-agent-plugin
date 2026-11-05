@@ -11,6 +11,7 @@
   "repository": "https://github.com/Parsely/parsely-agent-plugin",
   "license": "MIT",
   "privacyPolicyUrl": "https://www.parse.ly/privacy-policy/",
+  "supportUrl": "https://www.parse.ly/support/",
   "icon": "./assets/icon.png",
   "keywords": [
     "analytics",
