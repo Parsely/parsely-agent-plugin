@@ -3,7 +3,7 @@
   "version": "1.1.0",
   "description": "Parse.ly content analytics in your AI assistant: the Parse.ly MCP plus skills for building trustworthy, shareable reports.",
   "author": {
-    "name": "Automattic",
+    "name": "Automattic Inc.",
     "url": "https://www.parse.ly"
   },
   "homepage": "https://www.parse.ly",
