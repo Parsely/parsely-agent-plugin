@@ -10,13 +10,12 @@ your account can see.
 
 ## Why this repo exists
 
-Parse.ly runs a hosted MCP server, so any AI assistant can query a customer's analytics. The server provides the
-tools, but it doesn't teach an assistant how to build a report people can rely on: which dates to compare, how to
-trace each number to its source, and where to save the finished page.
+Like any other MCP server, the Parse.ly MCP server offers a set of deterministic tools built specifically for agents.
+While these tools include descriptions, they don't include much information about the work we do at Parse.ly:
+specifically, how we use these numbers to build a deep understanding of site performance.
 
-The skills in this repo fill that gap. They are published with the Parse.ly listings in the Claude and OpenAI
-directories and other registries, so anyone who adds Parse.ly gets the server and the skills together. There is
-nothing else to install or set up.
+These skills bridge the gap between "capable agent" and "expert data analyst". They load automatically through the
+Claude and OpenAI directories, among others.
 
 ## How this differs from Agentic Analytics
 
