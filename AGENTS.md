@@ -7,6 +7,8 @@ and OpenAI. Read `README.md` first.
 
 - **Skills are markdown only.** Nothing in `skills/` runs code on the user's machine: no scripts, no `bin/`, no
   local files. Everything a skill needs comes from Parse.ly MCP tools.
+- **Claude is the default format.** The repo root stays a working Claude plugin with no build step. Other platforms
+  get exports built from it, such as `scripts/build_openai.sh`. See `docs/publishing.md`.
 - **Skills are shared.** One `skills/` folder serves every platform. Write for "the assistant", never for Claude or
   ChatGPT by name. Platform-only details go in that platform's manifest.
 - **Skills don't redefine Parse.ly.** Metric meanings, routing and tool details come from the MCP server's
