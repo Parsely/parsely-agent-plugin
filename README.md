@@ -80,8 +80,7 @@ Every other platform gets an export built from the same `skills/` folder. Today 
 .claude-plugin/plugin.json      Claude plugin manifest (the repo root is the Claude plugin)
 .claude-plugin/marketplace.json lets Claude Code install straight from this repo
 .mcp.json                       the Parse.ly MCP server for Claude
-.codex-plugin/plugin.json       OpenAI (ChatGPT, Codex) manifest; `name` is the id OpenAI gave the existing app,
-                                and the MCP server stays attached to that app in OpenAI's portal
+.codex-plugin/plugin.json       OpenAI (ChatGPT, Codex) manifest; `name` is the id OpenAI gave the existing app
 skills/<name>/SKILL.md          the skills, shared by every platform
 docs/publishing.md              how to release to Claude, OpenAI and the MCP registry
 docs/openai-review.md           test cases for OpenAI's review step

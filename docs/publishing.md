@@ -75,13 +75,15 @@ Docs: [publish to the directory](https://claude.com/docs/directory/publish), [su
 
 ## OpenAI
 
-OpenAI never reads this repo. It reads the ZIP, which holds `.codex-plugin/plugin.json`, `skills/`, `assets/`, the README
-and the license. The ZIP has no MCP file, because the server is connected to the existing app in the portal.
+OpenAI never reads this repo. It reads the ZIP, which holds `.codex-plugin/plugin.json`, `.mcp.json`, `skills/`, `assets/`,
+the README and the license. The build writes its own `.mcp.json` without `type`, the format OpenAI documents. The ZIP must
+declare the MCP server: the portal rejects a package that omits it, because removing the MCP isn't supported.
 
 1. Open [Plugins](https://platform.openai.com/plugins) and select the Parse.ly plugin. Submitting takes an organization
    owner or **Apps Management Write**.
 2. Select **Upload plugin to make changes** and choose the ZIP. It must be complete, with a new version number.
-3. Fix anything under **Metadata & Skills**. Required skill scans must pass before you can submit.
+3. Fix anything under **Metadata & Skills**. Required skill scans must pass before you can submit. Under **MCPs**, check
+   the connection and scanned tools, and select **Reconnect** if it needs attention.
 4. Use the cases in `docs/openai-review.md` if the portal asks for test cases. Reviewer credentials go in the secure
    **Review details** form, never in the ZIP.
 5. Select **Submit for review**. Feedback arrives by email. Only one review can be active, so to replace a package under
