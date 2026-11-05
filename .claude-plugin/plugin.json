@@ -1,5 +1,6 @@
 {
   "name": "parsely",
+  "displayName": "Parse.ly",
   "version": "1.1.0",
   "description": "Parse.ly content analytics in your AI assistant: the Parse.ly MCP plus skills for building trustworthy, shareable reports.",
   "author": {
