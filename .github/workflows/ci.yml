@@ -1,0 +1,49 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+    tags: ["v*"]
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Check skills, tool names and denylist
+        run: python3 scripts/check_skills.py
+      - name: Manifests agree on version and MCP URL
+        run: |
+          python3 - <<'EOF'
+          import json
+          load = lambda path: json.load(open(path))
+          versions = {
+              load(".codex-plugin/plugin.json")["version"],
+              load(".claude-plugin/plugin.json")["version"],
+              *(p["version"] for p in load(".claude-plugin/marketplace.json")["plugins"]),
+          }
+          assert len(versions) == 1, f"manifest versions differ: {versions}"
+          urls = {
+              load(".mcp.json")["mcpServers"]["parsely"]["url"],
+              *(r["url"] for r in load("server.json")["remotes"]),
+          }
+          assert len(urls) == 1, f"MCP URLs differ: {urls}"
+          interface = load(".codex-plugin/plugin.json")["interface"]
+          for field, limit in {"displayName": 30, "shortDescription": 30, "longDescription": 4000, "developerName": 80}.items():
+              assert len(interface[field]) <= limit, f"interface.{field} is over {limit} characters"
+          EOF
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Validate the Claude plugin
+        run: npx -y @anthropic-ai/claude-code plugin validate .
+      - name: Build the OpenAI ZIP
+        run: bash scripts/build_openai.sh
+      - uses: actions/upload-artifact@v4
+        with:
+          name: openai-plugin
+          path: dist/*.zip

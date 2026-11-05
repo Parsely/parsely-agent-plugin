@@ -1,0 +1,16 @@
+# Backticked snake_case words skills may use that are not tool parameters or enum values:
+# response fields and names of other skills' concepts. Add a word here only when it is real.
+has_more
+in_progress
+variants_won
+original_won
+artifact_id
+base_version
+expires_in_days
+new_share_link
+called_at
+include_steps
+last_touch
+first_touch
+api_key
+avg_engaged

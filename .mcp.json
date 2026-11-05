@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "parsely": {
+      "type": "http",
+      "url": "https://dash.parsely.com/mcp"
+    }
+  }
+}

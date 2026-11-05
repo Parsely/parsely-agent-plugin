@@ -1,0 +1,8 @@
+# Regular expressions that must never appear in this public repo. Examples use example.com.
+# Customer names and internal hosts go in scripts/denylist.local.txt, which git ignores: listing them here would
+# publish them.
+a8c\.com
+linear\.app
+p2\.wordpress\.com
+@automattic\.com
+@parsely\.com

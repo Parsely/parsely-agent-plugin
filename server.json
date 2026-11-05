@@ -1,0 +1,14 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "com.parsely.dash/mcp",
+  "title": "Parse.ly MCP",
+  "description": "Query your Parse.ly content analytics: top content, referrers, campaigns, trends and real-time data.",
+  "websiteUrl": "https://dash.parsely.com",
+  "version": "1.0.0",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://dash.parsely.com/mcp"
+    }
+  ]
+}

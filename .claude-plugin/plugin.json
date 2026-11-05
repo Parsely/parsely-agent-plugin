@@ -1,0 +1,22 @@
+{
+  "name": "parsely",
+  "version": "1.1.0",
+  "description": "Parse.ly content analytics in your AI assistant: the Parse.ly MCP plus skills for building trustworthy, shareable reports.",
+  "author": {
+    "name": "Automattic",
+    "url": "https://www.parse.ly"
+  },
+  "homepage": "https://www.parse.ly",
+  "repository": "https://github.com/Parsely/parsely-agent-plugin",
+  "license": "MIT",
+  "privacyPolicyUrl": "https://www.parse.ly/privacy-policy/",
+  "icon": "./assets/icon.png",
+  "keywords": [
+    "analytics",
+    "parsely",
+    "content",
+    "reports",
+    "mcp"
+  ],
+  "mcpServers": "./.mcp.json"
+}

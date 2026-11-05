@@ -1,0 +1,28 @@
+{
+  "name": "app-6a99c656d25881918909ef4fdcebf204",
+  "version": "1.1.0",
+  "description": "Parse.ly is the content analytics platform that publishers and marketing teams use to see how their content performs. This app connects ChatGPT to your Parse.ly account, so you can ask questions about your sites in plain language and get answers from your real data.\n\nAsk which posts did best this week, where your traffic comes from, how a specific article performed, which authors or sections lead, how many readers are on the site right now, and how your campaigns, conversions, goals and headline tests are doing. You can also search your posts, authors, sections, tags and campaigns, look up Parse.ly documentation, and manage goals and saved groups.\n\nSign in with your existing Parse.ly login. The app only sees the sites and data you can already see in the Parse.ly dashboard.",
+  "author": {
+    "name": "Automattic Inc."
+  },
+  "skills": "./skills/",
+  "interface": {
+    "capabilities": [],
+    "category": "Data & Analytics",
+    "defaultPrompt": [
+      "How many readers are on example.com right now?",
+      "Where did the traffic on example.com come from this month?",
+      "What are the top 10 posts on example.com this week?"
+    ],
+    "developerName": "Automattic Inc.",
+    "displayName": "Parse.ly",
+    "longDescription": "Parse.ly is the content analytics platform that publishers and marketing teams use to see how their content performs. This app connects ChatGPT to your Parse.ly account, so you can ask questions about your sites in plain language and get answers from your real data.\n\nAsk which posts did best this week, where your traffic comes from, how a specific article performed, which authors or sections lead, how many readers are on the site right now, and how your campaigns, conversions, goals and headline tests are doing. You can also search your posts, authors, sections, tags and campaigns, look up Parse.ly documentation, and manage goals and saved groups.\n\nSign in with your existing Parse.ly login. The app only sees the sites and data you can already see in the Parse.ly dashboard.\n\nThe app can also build reports for you, such as a four-week health check, a weekly recap of top stories or an explanation of why traffic changed, with every number traced to its source, and save them as Parse.ly report links your team can open.",
+    "privacyPolicyURL": "https://www.parse.ly/privacy-policy/",
+    "shortDescription": "Query your content analytics",
+    "supportURL": "https://www.parse.ly/support/",
+    "termsOfServiceURL": "https://www.parse.ly/product-terms-2/",
+    "websiteURL": "https://www.parsely.com/",
+    "composerIcon": "./assets/composer-icon.png",
+    "logo": "./assets/icon.png"
+  }
+}

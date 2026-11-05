@@ -1,0 +1,4 @@
+dist/
+scripts/denylist.local.txt
+__pycache__/
+.DS_Store
