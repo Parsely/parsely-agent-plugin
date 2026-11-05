@@ -73,6 +73,9 @@ They are not live dashboards and not scheduled reports.
 The MCP server, its tools and their descriptions live in the Parse.ly dashboard code, not here. This repo holds
 only what each platform needs on top of the server URL.
 
+Claude is the default format: the repo root is a working Claude plugin, and Claude reads it directly from GitHub.
+Every other platform gets an export built from the same `skills/` folder. Today that means a ZIP for OpenAI.
+
 ```
 .claude-plugin/plugin.json      Claude plugin manifest (the repo root is the Claude plugin)
 .claude-plugin/marketplace.json lets Claude Code install straight from this repo
@@ -80,6 +83,7 @@ only what each platform needs on top of the server URL.
 .codex-plugin/plugin.json       OpenAI (ChatGPT, Codex) manifest; `name` is the id OpenAI gave the existing app,
                                 and the MCP server stays attached to that app in OpenAI's portal
 skills/<name>/SKILL.md          the skills, shared by every platform
+docs/publishing.md              how to release to Claude, OpenAI and the MCP registry
 docs/openai-review.md           test cases for OpenAI's review step
 assets/                         icons
 server.json                     entry for the official MCP registry
@@ -99,11 +103,7 @@ claude plugin validate .                            # Claude's own manifest chec
 
 ### Releasing
 
-1. `python3 scripts/sync_tools.py ../dash origin/main`, then `python3 scripts/check_skills.py`.
-2. `python3 scripts/bump_version.py <version>`, commit, tag `v<version>`, push.
-3. Claude: the directory picks up the new commit on the tracked branch and reviews it.
-4. OpenAI: upload `dist/parsely-openai-<version>.zip` to the existing Parse.ly plugin in the OpenAI portal.
-5. MCP registry: publish `server.json` only when it changed.
+See [docs/publishing.md](docs/publishing.md).
 
 ## Privacy
 
